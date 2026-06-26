@@ -1,0 +1,97 @@
+body.admin-body {
+    background: #f4f8fb;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Sidebar */
+.admin-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 260px;
+    height: 100vh;
+    background: #11243f;
+    color: #b0bfd1;
+    padding: 25px 0;
+    overflow-y: auto;
+    z-index: 1000;
+}
+.admin-sidebar .sidebar-brand {
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.3rem;
+    padding: 0 25px 20px;
+    display: block;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    margin-bottom: 15px;
+}
+.admin-sidebar .nav-link {
+    color: #b0bfd1;
+    padding: 12px 25px;
+    font-weight: 500;
+    border-left: 3px solid transparent;
+    transition: 0.2s;
+}
+.admin-sidebar .nav-link i { width: 22px; }
+.admin-sidebar .nav-link:hover,
+.admin-sidebar .nav-link.active {
+    background: rgba(33,150,243,0.12);
+    color: #fff;
+    border-left-color: var(--primary-blue);
+}
+.admin-sidebar .nav-section-title {
+    color: #5d7290;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 15px 25px 5px;
+}
+
+/* Main content */
+.admin-content {
+    margin-left: 260px;
+    min-height: 100vh;
+}
+.admin-topbar {
+    background: #fff;
+    padding: 16px 30px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.admin-topbar h5 { margin: 0; font-weight: 600; }
+.admin-body-content { padding: 30px; }
+
+/* Cards & Tables */
+.admin-card {
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    padding: 25px;
+}
+.table-admin thead th {
+    background: #f4f8fb;
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-bottom: none;
+}
+.table-admin td, .table-admin th {
+    padding: 14px 16px;
+    vertical-align: middle;
+}
+.badge-action {
+    width: 34px;
+    height: 34px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+@media (max-width: 991px) {
+    .admin-sidebar { transform: translateX(-100%); transition: 0.3s; }
+    .admin-sidebar.show { transform: translateX(0); }
+    .admin-content { margin-left: 0; }
+}
