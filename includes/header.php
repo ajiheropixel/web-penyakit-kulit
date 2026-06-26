@@ -1,3 +1,4 @@
+<?php require_once __DIR__ . '/functions.php'; ?>
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -24,7 +25,23 @@
                 <li class="nav-item"><a class="nav-link" href="#services">Layanan</a></li>
                 <li class="nav-item"><a class="nav-link" href="#contact">Kontak</a></li>
             </ul>
-            <a href="auth/login.php" class="btn btn-contact">Masuk / Daftar</a>
+            <?php if (isLoggedIn()): ?>
+                <div class="dropdown">
+                    <a class="btn btn-contact dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                        <i class="fa-solid fa-user me-1"></i> <?= htmlspecialchars($_SESSION['user_nama']) ?>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="user/dashboard.php">Dashboard</a></li>
+                        <li><a class="dropdown-item" href="user/riwayat.php">Riwayat Diagnosa</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item text-danger" href="auth/logout.php">Keluar</a></li>
+                    </ul>
+                </div>
+            <?php elseif (isAdmin()): ?>
+                <a href="admin/dashboard.php" class="btn btn-contact"><i class="fa-solid fa-gauge me-1"></i> Dashboard Admin</a>
+            <?php else: ?>
+                <a href="auth/login.php" class="btn btn-contact">Masuk / Daftar</a>
+            <?php endif; ?>
         </div>
     </div>
 </nav>

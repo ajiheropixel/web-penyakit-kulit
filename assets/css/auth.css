@@ -1,0 +1,33 @@
+.auth-body {
+    background: var(--light-bg);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+}
+.auth-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 30px 15px;
+}
+.auth-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+    padding: 45px 40px;
+    width: 100%;
+    max-width: 440px;
+}
+.auth-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+}
+.auth-card .form-control {
+    padding: 11px 14px;
+    border-radius: 8px;
+}
+.auth-card .btn-gradient {
+    padding: 11px;
+}
