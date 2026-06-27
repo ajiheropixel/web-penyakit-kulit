@@ -1,8 +1,8 @@
 <?php
-$pageTitle = 'Dashboard';
-$activePage = 'dashboard';
-require_once '../includes/admin_header.php';
-require_once '../config/database.php';
+$pageTitle = 'Data Admin';
+$activePage = 'akun_admin';
+require_once '../../includes/admin_header.php';
+require_once '../../config/database.php';
 
 $db = new Database();
 $conn = $db->getConnection();
@@ -131,4 +131,4 @@ new Chart(document.getElementById('chartPenyakit'), {
 <?php endif; ?>
 </script>
 
-<?php require_once '../includes/admin_footer.php'; ?>
+<?php require_once '../../includes/admin_footer.php'; ?>

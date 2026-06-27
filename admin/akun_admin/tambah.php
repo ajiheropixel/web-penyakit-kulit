@@ -1,5 +1,5 @@
 <?php
-$pageTitle = 'Data Admin';
+$pageTitle = 'Tambah Admin';
 $activePage = 'akun_admin';
 require_once '../../includes/admin_header.php';
 require_once '../../config/database.php';
