@@ -95,3 +95,54 @@ body.admin-body {
     .admin-sidebar.show { transform: translateX(0); }
     .admin-content { margin-left: 0; }
 }
+/* Overlay untuk sidebar mobile */
+.sidebar-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    z-index: 999;
+}
+.sidebar-overlay.show { display: block; }
+
+@media (max-width: 991px) {
+    .admin-topbar h5 { font-size: 1rem; }
+}
+
+/* Loading state tombol submit */
+.btn-loading {
+    pointer-events: none;
+    opacity: 0.75;
+}
+.btn-loading .spinner-border {
+    width: 14px;
+    height: 14px;
+    margin-right: 6px;
+}
+
+/* Empty state */
+.empty-state {
+    text-align: center;
+    padding: 50px 20px;
+    color: var(--text-muted);
+}
+.empty-state i {
+    font-size: 2.5rem;
+    color: #d3dde6;
+    margin-bottom: 15px;
+    display: block;
+}
+
+/* Form validation */
+.form-control.is-invalid, .form-select.is-invalid {
+    border-color: #dc3545;
+}
+.invalid-feedback-custom {
+    color: #dc3545;
+    font-size: 0.8rem;
+    margin-top: 4px;
+}
+
+/* Smooth transition untuk semua tombol */
+.btn { transition: all 0.2s ease; }
+.btn-gradient:active { transform: scale(0.97); }

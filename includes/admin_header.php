@@ -38,11 +38,13 @@ $activePage = $activePage ?? '';
     </nav>
 </aside>
 
+<div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleAdminSidebar()"></div>
+
 <div class="admin-content">
     <div class="admin-topbar">
         <div>
-            <button class="btn btn-sm btn-light d-lg-none me-2" onclick="document.getElementById('adminSidebar').classList.toggle('show')">
-                <i class="fa-solid fa-bars"></i>
+            <button class="btn btn-sm btn-light d-lg-none me-2" onclick="toggleAdminSidebar()">
+            <i class="fa-solid fa-bars"></i>
             </button>
             <h5 class="d-inline"><?= $pageTitle ?? '' ?></h5>
         </div>

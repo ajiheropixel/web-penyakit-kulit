@@ -62,5 +62,16 @@ $adminList = $conn->query("SELECT * FROM admin ORDER BY created_at ASC")->fetchA
         </table>
     </div>
 </div>
+<script>
+const pass = document.querySelector('input[name="password"]');
+const confirm = document.querySelector('input[name="confirm_password"]');
 
+confirm.addEventListener('input', function () {
+    if (pass.value !== confirm.value) {
+        confirm.classList.add('is-invalid');
+    } else {
+        confirm.classList.remove('is-invalid');
+    }
+});
+</script>
 <?php require_once '../../includes/admin_footer.php'; ?>

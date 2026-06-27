@@ -91,6 +91,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <p class="text-center mt-2"><a href="../index.php" class="text-muted small"><i class="fa-solid fa-arrow-left me-1"></i>Kembali ke Beranda</a></p>
     </div>
 </div>
+<script>
+const pass = document.querySelector('input[name="password"]');
+const confirm = document.querySelector('input[name="confirm_password"]');
 
+confirm.addEventListener('input', function () {
+    if (pass.value !== confirm.value) {
+        confirm.classList.add('is-invalid');
+    } else {
+        confirm.classList.remove('is-invalid');
+    }
+});
+</script>
 </body>
 </html>

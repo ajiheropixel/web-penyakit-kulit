@@ -63,7 +63,12 @@ $riwayat = $stmt->fetchAll();
                     </tr>
                     <?php endforeach; ?>
                 <?php else: ?>
-                    <tr><td colspan="4" class="text-center text-muted py-4">Belum ada riwayat diagnosa.</td></tr>
+                   <tr><td colspan="3">
+    <div class="empty-state">
+        <i class="fa-solid fa-inbox"></i>
+        Belum ada data gejala. Klik "Tambah Gejala" untuk menambahkan.
+    </div>
+</td></tr>
                 <?php endif; ?>
             </tbody>
         </table>
